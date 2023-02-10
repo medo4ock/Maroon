@@ -1,0 +1,14 @@
+//BUTTON STYLE
+.btn {
+    padding: 11px 27px 12px;
+    border: 1px solid #b3bac1;
+    border-radius: 2px;
+    @include font("Mplus1p", 500, 16px);
+    line-height: 1;
+    &:hover,
+    &:focus-within {
+      background-color: $brand_color;
+      color: #fff;
+      border: 1px solid $brand_color;
+    }
+  }

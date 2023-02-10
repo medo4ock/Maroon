@@ -1,0 +1,12 @@
+//OFFER STYLES
+.offer {
+    &__title {
+      @include font("Raleway", 500, 32px);
+      margin-bottom: 30px;
+      line-height: 1;
+    }
+    &__text {
+      margin-bottom: 40px;
+    }
+  }
+  

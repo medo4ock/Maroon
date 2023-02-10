@@ -1,0 +1,344 @@
+@import "fonts.scss";
+@import "reset.scss";
+@import "common.scss";
+
+//UTILS
+@import "variables.scss";
+@import "templates.scss";
+@import "mixins.scss";
+
+/* ----- HEADER START ----- */
+.header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  &__menu {
+    margin-left: auto;
+  }
+}
+.account-nav {
+  display: flex;
+  column-gap: 10px;
+  margin-left: 50px;
+  margin-right: -10px;
+  font-size: 21px;
+}
+/* ----- HEADER END ----- */
+/* ----- HERO START ----- */
+.hero {
+  padding-bottom: 70px;
+  background-image: url(../img/hero-bg.webp);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  margin-bottom: 140px;
+  &__wrap {
+    display: flex;
+    padding-left: 65px;
+    padding-right: 65px;
+    padding-top: 135px;
+  }
+  &__offer {
+    @extend %column-center;
+    padding: 60px 60px 0;
+    text-align: center;
+    &-title {
+      margin-bottom: 40px;
+    }
+    &-text {
+      @include font("Raleway", 500, 58px);
+      text-transform: uppercase;
+      line-height: 0.8;
+      order: -1;
+      margin-bottom: 30px;
+    }
+  }
+  &__card {
+    width: 330px;
+    &:nth-child(2) {
+      order: -1;
+    }
+    &-link {
+      @include font("Mplus1p", 500, 16px);
+      margin-left: -10px;
+      display: flex;
+      align-items: center;
+      margin-top: -5px;
+      &:hover,
+      &:focus-within {
+        .hero__card-arrow {
+          stroke: $brand_color;
+        }
+      }
+    }
+    &-arrow {
+      margin-left: auto;
+      stroke: $text_color;
+      margin-right: -10px;
+      transition: $tr_time;
+    }
+  }
+}
+/* ----- HERO END ----- */
+/* ----- BESTSELLERS StART -----*/
+.bestsellers {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 140px;
+  &__offer {
+    max-width: 215px;
+    margin-right: 86px;
+    padding-top: 56px;
+    &-title {
+      margin-bottom: 20px;
+    }
+    &-text {
+      margin-bottom: 30px;
+    }
+    &-btn {
+      padding-left: 23px;
+      padding-right: 23px;
+    }
+  }
+  &-slider {
+    margin-right: -140px;
+    width: 1010px;
+    padding-bottom: 50px;
+    &__slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      &-text {
+        font-size: 13px;
+        line-height: 1;
+        text-align: center;
+        position: absolute;
+        bottom: 25px;
+      }
+      &-title {
+        @include font("Raleway", 500, 16px);
+        margin-bottom: 10px;
+      }
+      &-subtitle {
+        color: $text_color_light;
+        margin-bottom: 20px;
+      }
+      &-btn {
+        border-bottom: 1px solid #000;
+        padding: 0 0 3px 0;
+        &:hover,
+        &:focus-within {
+          border-bottom: 1px solid $brand_color;
+        }
+      }
+    }
+    &__btn {
+      width: initial;
+      height: initial;
+      top: initial;
+      bottom: 0;
+      &:hover,
+      &:focus-within {
+        .bestsellers-slider__arrow {
+          stroke: $brand_color;
+        }
+      }
+      &::after {
+        content: "";
+      }
+      &_prev {
+        transform: rotateZ(180deg);
+        left: initial;
+        right: 18.5%;
+      }
+      &_next {
+        right: 13%;
+      }
+    }
+    &__arrow {
+      transition: $tr_time;
+      stroke: #122947;
+    }
+  }
+}
+/* ----- BESTSELLERS END -----*/
+/* ----- BANNER StART -----*/
+.banner {
+  padding-top: 81px;
+  padding-bottom: 81px;
+  background-image: url(../img/can_&_flowers.webp);
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  background-size: cover;
+  margin-bottom: 140px;
+  &__offer {
+    max-width: 285px;
+    margin-left: calc(50% + 115px);
+    &-title {
+      margin-bottom: 23px;
+    }
+    &-text {
+      margin-bottom: 33px;
+    }
+  }
+}
+/* ----- BANNER END -----*/
+/* ----- PRODUCT SECTION StART -----*/
+.product-section {
+  margin-bottom: 140px;
+  position: relative;
+}
+.product {
+  margin-right: auto;
+  display: flex;
+  &__offer {
+    padding: 90px 223px 90px 100px;
+    width: 670px;
+    background-color: $bg_color2;
+  }
+  &__img {
+    position: absolute;
+    top: calc(50% - 225px);
+    right: 0;
+  }
+}
+/* ----- PRODUCT SECTION END -----*/
+/* ----- OUR STORY StART -----*/
+.our-story {
+  padding-top: 111px;
+  padding-bottom: 111px;
+  margin-bottom: 140px;
+  background-image: url(../img/chamomiles.webp);
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  background-size: cover;
+  text-align: center;
+  &__quote {
+    padding-left: 205px;
+    padding-right: 205px;
+    .our-story__quote-text {
+      @include font("Raleway", 500, 32px);
+      margin-bottom: 50px;
+      line-height: 1.25;
+    }
+  }
+  &__btn {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+/* ----- OUR STORY END -----*/
+/* ----- SUBSCRIBE START -----*/
+.subscribe {
+  margin-bottom: 140px;
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__collage {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 700px;
+    &-img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__offer {
+    max-width: 381px;
+    &-btn {
+      padding-left: 33px;
+      padding-right: 33px;
+    }
+  }
+}
+/* ----- SUBSCRIBE END -----*/
+/* ----- CONTACTS SECTION START -----*/
+.contacts-section {
+  margin-bottom: 140px;
+  position: relative;
+}
+.contacts {
+  max-width: 670px;
+  background-color: $bg_color2;
+  padding: 91px 314px 81px 100px;
+  line-height: 1;
+  &__title {
+    @include font("Raleway", 500, 32px);
+    margin-bottom: 30px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    margin-bottom: 20px;
+    &:first-child {
+      .contacts__list-value {
+        line-height: 1.44;
+      }
+    }
+    &-title {
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+    &-link {
+      padding: 0;
+    }
+  }
+  &__socials {
+    margin-left: -10px;
+  }
+  &__map {
+    position: absolute;
+    top: calc(50% - 211px);
+    right: 0;
+    z-index: 10;
+  }
+  &__map-link {
+    display: none;
+  }
+}
+/* ----- CONTACTS SECTION END -----*/
+/* ----- FOOTER START -----*/
+.footer {
+  background-color: $bg_color2;
+  position: relative;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: hsl(0, 0%, 82%);
+    position: absolute;
+    left: 0;
+    bottom: 60px;
+  }
+  &__nav {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  &__menu {
+    column-gap: 20px;
+    margin-left: 50px;
+    margin-right: auto;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 12px;
+    color: hsl(0, 0%, 58%);
+    &-policy {
+      color: hsl(0, 0%, 58%);
+    }
+  }
+}
+/* ----- FOOTER END -----*/

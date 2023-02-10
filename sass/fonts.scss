@@ -1,0 +1,37 @@
+/* ----- FONTS START ----- */
+@font-face {
+    font-family: "Mplus1p";
+    src: local("Mplus1p Regular"), local("Mplus1p-Regular"),
+      url("../fonts/Mplus1p-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Mplus1p";
+    src: local("Mplus1p Medium"), local("Mplus1p-Medium"),
+      url("../fonts/Mplus1p-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Raleway";
+    src: local("Raleway Medium"), local("Raleway-Medium"),
+      url("../fonts/Raleway-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "icomoon";
+    src: url("../fonts/icomoon.eot?poyzy6");
+    src: url("../fonts/icomoon.eot?poyzy6#iefix") format("embedded-opentype"),
+      url("../fonts/icomoon.ttf?poyzy6") format("truetype"),
+      url("../fonts/icomoon.woff?poyzy6") format("woff"),
+      url("../fonts/icomoon.svg?poyzy6#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  /* ----- FONTS END ----- */
